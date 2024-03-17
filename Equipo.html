@@ -134,24 +134,29 @@
   <main class="py-5">
     <div class="container">
       <section id="inicio" class="mb-5">
-        <h2 class="mb-3">Sobre VITAIROS SM</h2>
-        <p>Bienvenido a VITAIROS, tu compañero digital para el bienestar emocional. En VITAIROS, nos dedicamos a proporcionar un espacio seguro y accesible donde puedes encontrar apoyo emocional personalizado para mejorar tu salud mental. Nuestra aplicación ofrece una variedad de herramientas innovadoras, consejos prácticos y recursos diseñados para ayudarte a comprender, gestionar y fortalecer tu bienestar emocional en cualquier momento y lugar. Con VITAIROS, puedes tomar el control de tu salud mental y comenzar tu viaje hacia una vida más equilibrada y satisfactoria. ¡Únete a nuestra comunidad hoy y descubre cómo podemos ayudarte a sentirte mejor, día tras día!</p>
-
-<p style="text-align: center;"><strong>Misión:</strong></p>
-<div style="text-align: center;">
-  <img src="loginvit.png" alt="Imagen de la misión" style="border-radius: 50%; float: left; margin-right: 10px; width: 200px; height: 200px;">
-  <p>En VITAIROS, nuestra misión es proporcionar un apoyo emocional personalizado y accesible a través de nuestra aplicación de salud mental. Nos comprometemos a mejorar el bienestar emocional de nuestros usuarios al ofrecerles herramientas innovadoras, consejos prácticos y un espacio seguro para reflexionar y crecer. Buscamos empoderar a las personas para que tomen el control de su salud mental y se sientan apoyadas en su viaje hacia una vida más equilibrada y satisfactoria.</p>
-</div>
-
-<p style="text-align: center;"><strong>Visión:</strong></p>
-<div style="text-align: center;">
-  <img src="iniciovit.png" alt="Imagen de la visión" style="border-radius: 20%; float: right; margin-left: 20px;width: 200px; height: 200px;">
-  <p>Nuestra visión en VITAIROS es ser líderes en la promoción del bienestar emocional en todo el mundo, utilizando la tecnología para derribar las barreras de acceso a la atención de la salud mental. Nos esforzamos por ser reconocidos como una plataforma confiable y efectiva que transforma la manera en que las personas cuidan de su salud mental, proporcionando un apoyo continuo y personalizado que se adapta a las necesidades individuales de cada usuario. Con nuestro compromiso con la innovación, la calidad y la empatía, aspiramos a ser el compañero de confianza en el viaje hacia una vida emocionalmente saludable y plena.</p>
-</div>
-
-        <a href="SaludM.html">Descargar (Proximamente)</a>
+        <h2 class="mb-3"><strong>Contacto:</strong></h2>
+        <p>Este módulo te permite ponerte en contacto con nosotros para cualquier consulta, pregunta o comentario que puedas tener. ¡Estamos aquí para ayudarte! </p>
       </section>
 
+      <section id="experiencia-profesional" class="mb-5">
+        <h2 class="mb-3">Bastian Lisperguer</h2>
+        <p>Si necesitas contactar directamente con Bastian Lisperguer, nuestro representante principal, puedes hacerlo utilizando la información de contacto proporcionada a continuación:
+        </p>
+        <p>Nombre: Bastian Lisperguer</p>
+        <p>Correo Electrónico: bastianaguayolisperguer@gmail.com</p>
+        <p>Teléfono: +56936278490 </p>
+        <!-- Agrega enlace para redirigir a Profesional.html -->
+        <a href="Yo.html">Ver más</a>
+      </section>
+      <section id="viaja-conmigo" class="mb-5">
+        <h2 class="mb-3">Contacto comercial</h2>
+        <p>Para asuntos comerciales, colaboraciones o consultas relacionadas con asociaciones, puedes ponerte en contacto con nuestro equipo comercial:
+        </p>
+        <p>Correo Electrónico: bastianaguayolisperguer@gmail.com </p>
+        <p>Teléfono: +56936278490</p>
+        <!-- Agrega enlace para redirigir a Viaje.html -->
+        <a href="Geminis.html"></a>
+      </section>
     </div>
   </main>
 
@@ -160,18 +165,6 @@
       <p class="text-center">Derechos reservados &copy; 2023</p>
     </div>
   </footer>
-
-  <script>
-    function dropdownMenu() {
-      document.getElementById("navbarDropdown").classList.add("show");
-      document.querySelector(".dropdown-menu").classList.add("show");
-    }
-
-    function hideDropdown() {
-      document.getElementById("navbarDropdown").classList.remove("show");
-      document.querySelector(".dropdown-menu").classList.remove("show");
-    }
-  </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -184,6 +177,16 @@
     function hideDropdown(id) {
       document.getElementById(id).classList.remove('show');
     }
+
+    // Cerrar menú desplegable al hacer clic en el documento
+    document.addEventListener('click', function (e) {
+      const dropdowns = document.querySelectorAll('.dropdown-menu.fade');
+      dropdowns.forEach((dropdown) => {
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      });
+    });
   </script>
 </body>
 </html>

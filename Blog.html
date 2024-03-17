@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bastian Lisperguer</title>
+  <title>VITAIROS</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="Yo.css">
   <style>
@@ -11,97 +11,181 @@
     section:hover {
       background-color: #f0f0f0;
     }
+
+    /* Estilos para el navbar */
+    .navbar-nav .nav-link {
+      color: #333; /* Color del texto */
+      transition: background-color 0.3s; /* Transición suave del color de fondo */
+    }
+
+    .navbar-nav .nav-link:hover {
+      background-color: rgba(0, 0, 0, 0.1); /* Cambiar el color de fondo al pasar el cursor */
+    }
+
+    .navbar-nav .dropdown-menu {
+      border-radius: 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+    }
+
+    .navbar-nav .dropdown-item {
+      font-weight: bold;
+    }
+
+    .dropdown-menu {
+      margin-top: 0; /* Alinear el menú con el botón */
+    }
+
+    .nav-link.dropdown-toggle::after {
+      display: none; /* Ocultar la flecha de despliegue en los elementos con dropdown */
+    }
+
+    .dropdown-menu.fade {
+      display: none !important; /* Ocultar el menú desplegable por defecto */
+      opacity: 1; /* Ajustar la opacidad para que no se vea parpadeo */
+    }
+
+    .dropdown-menu.show {
+      display: block !important; /* Mostrar el menú cuando esté abierto */
+    }
   </style>
 </head>
 <body>
 
   <header class="bg-dark text-white py-4">
     <div class="container">
-      <h1 class="text-center">Bastian Lisperguer</h1>
+      <div class="text-center">
+          <img src="Logovit.png" alt="VITAIROS" width="300" height="200">
+      </div>
     </div>
   </header>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html"><b>Inicio</b></a>
-        </li>
-        <li class="nav-item dropdown" onmouseover="showDropdown('sobreMiDropdown')" onmouseout="hideDropdown('sobreMiDropdown')">
-          <a class="nav-link dropdown-toggle" href="#" id="sobreMiLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sobre mí
-          </a>
-          <div class="dropdown-menu" id="sobreMiDropdown">
-            <a class="dropdown-item" href="Yo.html">Sobre mí</a>
-            <a class="dropdown-item" href="Profesional.html">Profesional</a>
-            <a class="dropdown-item" href="Viaje.html">Viaja conmigo</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown" onmouseover="showDropdown('VITAIROSDropdown')" onmouseout="hideDropdown('VITAIROSDropdown')">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            VITAIROS
-          </a>
-          <div class="dropdown-menu" id="VITAIROSDropdown">
-            <a class="dropdown-item" href="Vitairos.html">VITAIROS</a>
-            <a class="dropdown-item" href="SaludM.html">VITAIROS SM</a>
-            <a class="dropdown-item" href="Geminis.html">G3minis</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown" onmouseover="showDropdown('BlogDropdown')" onmouseout="hideDropdown('BlogDropdown')">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Blog
-          </a>
-          <div class="dropdown-menu" id="BlogDropdown">
-            <a class="dropdown-item" href="Blog.html">Blog</a>
-            <a class="dropdown-item" href="IBM.html">Informatica en Salud</a>
-            <a class="dropdown-item" href="IA.html">IA</a>
-            <a class="dropdown-item" href="Economia.html">Economia</a>
-            <a class="dropdown-item" href="Emprende.html">Emprendemos</a>
-            <a class="dropdown-item" href="Innovacion.html">Innova</a>
-            <a class="dropdown-item" href="TD.html">Trasformación Digital y Gestión del cabio</a>
-            <a class="dropdown-item" href="TI.html">Tecnologias de la Información</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown" onmouseover="showDropdown('ContactoMiDropdown')" onmouseout="hideDropdown('ContactoDropdown')">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Contacto
-          </a>
-          <div class="dropdown-menu" id="ContactoDropdown">
-            <a class="dropdown-item" href="Bastian.html">Bastian Lisperguer</a>
-            <a class="dropdown-item" href="Empresa.html">Comercial</a>
-          </div>
-        </li>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><b>Inicio</b></a>
+          </li>
+          <li class="nav-item dropdown" onmouseover="showDropdown('sobreMiDropdown')" onmouseout="hideDropdown('sobreMiDropdown')">
+            <a class="nav-link dropdown-toggle" href="#" id="sobreMiLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Equipo
+            </a>
+            <div class="dropdown-menu fade" id="sobreMiDropdown">
+              <a class="dropdown-item" href=".html">Marisol Vásquez</a>
+              <a class="dropdown-item" href=".html">Leandro Aguayo</a>
+              <!-- Submenú "Otras Opciones" dentro de "Equipo" -->
+              <div class="dropdown">
+                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Bastian Lisperguer
+                </a>
+                <div class="dropdown-menu fade" aria-labelledby="navbarDropdown2">
+                  <a class="dropdown-item" href="Yo.html.html">Bastian Lisperguer</a>
+                  <a class="dropdown-item" href="Profesional.html">Carrera Profesional</a>
+                  <a class="dropdown-item" href="Viaje.html">Viaja con migo</a>
+                </div>
+              </div>
+            </div>
+          </li>
 
+          <li class="nav-item dropdown" onmouseover="showDropdown('VITAIROSDropdown')" onmouseout="hideDropdown('VITAIROSDropdown')">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              VITAIROS
+            </a>
+            <div class="dropdown-menu" id="VITAIROSDropdown">
+              <a class="dropdown-item" href="Vitairos.html">VITAIROS</a>
+              <a class="dropdown-item" href="SaludM.html">VITAIROS SM</a>
+              <a class="dropdown-item" href="Geminis.html">G3minis</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown" onmouseover="showDropdown('BlogDropdown')" onmouseout="hideDropdown('BlogDropdown')">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Blog
+            </a>
+            <div class="dropdown-menu" id="BlogDropdown">
+              <a class="dropdown-item" href="Blog.html">Blog</a>
+              <a class="dropdown-item" href="IBM.html">Informática en Salud</a>
+              <a class="dropdown-item" href="IA.html">IA & Big Data</a>
+              <a class="dropdown-item" href="Economia.html">Economia & Política</a>
+              <a class="dropdown-item" href="Emprende.html">Emprende e Innova</a>
+              <a class="dropdown-item" href="TD.html">Trasformación Digital y Gestión del cambio</a>
+              <a class="dropdown-item" href="TI.html">IT & IoT</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown" onmouseover="showDropdown('ContactoDropdown')" onmouseout="hideDropdown('BlogDropdown')">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Contacto
+            </a>
+            <div class="dropdown-menu" id="BlogDropdown">
+              <a class="dropdown-item" href="Contacto.html">Contacto</a>
+              <a class="dropdown-item" href="Yo.html">Bastian Lisperguer</a>
+              <a class="dropdown-item" href="Empresa.html">Comercial</a>
+
+            </div>
+          </li>
+          <!-- Agrega más elementos de menú desplegable siguiendo el mismo patrón -->
         </ul>
+      </div>
     </div>
   </nav>
   <main class="py-5">
     <div class="container">
       <section id="inicio" class="mb-5">
-        <h2 class="mb-3">Sobre mí</h2>
-        <p>¡Hola! Soy Bastian, un profesional apasionado por la tecnología y la salud.
+        <h2 class="mb-3"><strong>Blog (Proximamente) y Opiniones:</strong></h2>
+        <p> </p>
+        </section>
 
-A lo largo de mi carrera, he acumulado una amplia experiencia en informática especializada en sanidad, trabajando en proyectos emocionantes y desafiantes que han contribuido al avance de la innovación y la mejora sanitaria.
-
-Me apasiona compartir mi conocimiento y experiencia con los demás, por lo que siempre estoy buscando oportunidades para colaborar con colegas, participar en eventos de la industria y contribuir a la comunidad a través de iniciativas de mentoría y divulgación.
-</p>
-        <p>En mi tiempo libre, me encanta viajar por el mundo de una forma sencilla, explorando nuevos lugares y disfrutando de la naturaleza, las personas y sus culturas tan diversas. Creo firmemente en el equilibrio entre el trabajo y la vida personal, y estoy comprometido a mantenerme saludable y feliz en todas las áreas de mi vida.
-        </p>
-        <p>Si quieres saber más sobre mi carrera profesional puedes ver más detalle en el apartado “Experiencia profesional” y/o prefieres tener información sobre los distintos lugares que he visitado y saber un poco más de estas aventuras y cómo podrías hacerlas tú, puedes ver el apartado de “Viaja conmigo”.
-        </p>
-        <p>Espero que tengas una excelente jornada y estoy encantado de poder contribuir. Ante cualquier consulta no dudes en contactarme.</p>
-      </section>
-      <section id="experiencia-profesional" class="mb-5">
-        <h2 class="mb-3">Experiencia Profesional</h2>
-        <p> En esta sección, te invito a explorar mi trayectoria laboral, logros y habilidades adquiridas a lo largo de los años. </p>
+      <section id="IBM" class="mb-5">
+        <h2 class="mb-3">Informática en Salud</h2>
+        <p></p>
+        <p></p>
         <!-- Agrega enlace para redirigir a Profesional.html -->
-        <a href="Profesional.html">Ver más</a>
+
       </section>
-      <section id="viaja-conmigo" class="mb-5">
-        <h2 class="mb-3">Viaja conmigo</h2>
-        <p>Aquí te invito a descubrir destinos increíbles, experiencias inolvidables y momentos mágicos alrededor del mundo. Desde explorar las maravillas naturales hasta sumergirse en la cultura local, cada viaje es una oportunidad de crecimiento, conexión y descubrimiento. </p>
-        <!-- Agrega enlace para redirigir a Viaje.html -->
-        <a href="Viaje.html">Ver más</a>
+      <section id="IA" class="mb-5">
+        <h2 class="mb-3">IA & Big Data</h2>
+        <section id="IBM" class="mb-5">
+          <h2 class="mb-3">Informática en Salud</h2>
+          <p></p>
+          <p></p>
+          <!-- Agrega enlace para redirigir a Profesional.html -->
+          <a href=".html">Ver más</a>
+        </section>
+      </section>
+        <section id="Politica" class="mb-5">
+          <h2 class="mb-3">Economia y Política</h2>
+          <p></p>
+          <p> </p>
+          <p></p>
+          <!-- Agrega enlace para redirigir a Viaje.html -->
+          <a href=".html"></a>
+        </section>
+        <section id="Emprende" class="mb-5">
+          <h2 class="mb-3">Emprende e Innova</h2>
+          <p></p>
+          <p> </p>
+
+          <!-- Agrega enlace para redirigir a Viaje.html -->
+          <a href=".html"></a>
+        </section>
+        <section id="transforacion" class="mb-5">
+          <h2 class="mb-3">Transformación Digital & Gestión del Cambio</h2>
+          <p></p>
+          <p></p>
+
+          <!-- Agrega enlace para redirigir a Viaje.html -->
+          <a href=".html"></a>
+        </section>
+        <section id="IT" class="mb-5">
+          <h2 class="mb-3">IT e IoT</h2>
+          <p></p>
+          <p></p>
+          <!-- Agrega enlace para redirigir a Viaje.html -->
+          <a href=".html"></a>
+        </section>
       </section>
     </div>
   </main>
@@ -111,18 +195,6 @@ Me apasiona compartir mi conocimiento y experiencia con los demás, por lo que s
       <p class="text-center">Derechos reservados &copy; 2023</p>
     </div>
   </footer>
-
-  <script>
-    function dropdownMenu() {
-      document.getElementById("navbarDropdown").classList.add("show");
-      document.querySelector(".dropdown-menu").classList.add("show");
-    }
-
-    function hideDropdown() {
-      document.getElementById("navbarDropdown").classList.remove("show");
-      document.querySelector(".dropdown-menu").classList.remove("show");
-    }
-  </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -135,6 +207,16 @@ Me apasiona compartir mi conocimiento y experiencia con los demás, por lo que s
     function hideDropdown(id) {
       document.getElementById(id).classList.remove('show');
     }
+
+    // Cerrar menú desplegable al hacer clic en el documento
+    document.addEventListener('click', function (e) {
+      const dropdowns = document.querySelectorAll('.dropdown-menu.fade');
+      dropdowns.forEach((dropdown) => {
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      });
+    });
   </script>
 </body>
 </html>
