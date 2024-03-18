@@ -3,73 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El futuro es Hoy</title>
+  <title>VITAIROS</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="Yo.css">
+  <style>
+    /* Estilo para resaltar el apartado cuando se pasa el cursor por encima */
+    section:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* Estilos para el navbar */
+    .navbar-nav .nav-link {
+      color: #333; /* Color del texto */
+      transition: background-color 0.3s; /* Transición suave del color de fondo */
+    }
+
+    .navbar-nav .nav-link:hover {
+      background-color: rgba(0, 0, 0, 0.1); /* Cambiar el color de fondo al pasar el cursor */
+    }
+
+    .navbar-nav .dropdown-menu {
+      border-radius: 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+    }
+
+    .navbar-nav .dropdown-item {
+      font-weight: bold;
+    }
+
+    .dropdown-menu {
+      margin-top: 0; /* Alinear el menú con el botón */
+    }
+
+    .nav-link.dropdown-toggle::after {
+      display: none; /* Ocultar la flecha de despliegue en los elementos con dropdown */
+    }
+
+    .dropdown-menu.fade {
+      display: none !important; /* Ocultar el menú desplegable por defecto */
+      opacity: 1; /* Ajustar la opacidad para que no se vea parpadeo */
+    }
+
+    .dropdown-menu.show {
+      display: block !important; /* Mostrar el menú cuando esté abierto */
+    }
+    .carousel-item img {
+      max-width: 100%; /* Establece el ancho máximo al 100% del contenedor */
+      height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    }
+
+    .carousel-caption p.text {
+      color: #000; /* Color negro para los textos */
+      padding: 10px; /* Añadir espacio alrededor del texto */
+      background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente para mejorar la legibilidad */
+      width: auto; /* Establecer el ancho automático para ajustarse al contenido */
+       left: 20%; /* Ajusta este valor según sea necesario */
+      z-index: 1; /* Asegurar que los textos estén por encima de las imágenes */
+      position: relative; /* Cambiar la posición a relativa */
+      margin-top: 30px; /* Ajustar el margen superior para separar los textos de los títulos */
+    }
+  </style>
 </head>
 <body>
 
   <header class="bg-dark text-white py-4">
     <div class="container">
-      <h1 class="text-center"><b>El futuro es Hoy</b></h1>
+      <div class="text-center">
+          <img src="Logovit.png" alt="VITAIROS" width="300" height="200">
+      </div>
     </div>
   </header>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html"><b>Inicio</b></a>
-        </li>
-        <li class="nav-item dropdown" onmouseover="showDropdown('sobreMiDropdown')" onmouseout="hideDropdown('sobreMiDropdown')">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sobre mí
-          </a>
-          <div class="dropdown-menu" id="sobreMiDropdown">
-            <a class="dropdown-item" href="Yo.html">Sobre mí</a>
-            <a class="dropdown-item" href="Profesional.html">Profesional</a>
-            <a class="dropdown-item" href="Viaje.html">Viaja conmigo</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown" onmouseover="showDropdown('VITAIROSDropdown')" onmouseout="hideDropdown('VITAIROSDropdown')">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            VITAIROS
-          </a>
-          <div class="dropdown-menu" id="VITAIROSDropdown">
-            <a class="dropdown-item" href="Vitairos.html">VITAIROS</a>
-            <a class="dropdown-item" href="SaludM.html">VITAIROS SM</a>
-            <a class="dropdown-item" href="Geminis.html">G3minis</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown" onmouseover="showDropdown('BlogDropdown')" onmouseout="hideDropdown('BlogDropdown')">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Blog
-          </a>
-          <div class="dropdown-menu" id="BlogDropdown">
-            <a class="dropdown-item" href="Blog.html">Blog</a>
-            <a class="dropdown-item" href="IBM.html">Informatica en Salud</a>
-            <a class="dropdown-item" href="IA.html">IA</a>
-            <a class="dropdown-item" href="Economia.html">Economia</a>
-            <a class="dropdown-item" href="Emprende.html">Emprendemos</a>
-            <a class="dropdown-item" href="Innovacion.html">Innova</a>
-            <a class="dropdown-item" href="TD.html">Trasformación Digital y Gestión del cabio</a>
-            <a class="dropdown-item" href="TI.html">Tecnologias de la Información</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown" onmouseover="showDropdown('ContactoMiDropdown')" onmouseout="hideDropdown('ContactoDropdown')">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Contacto
-          </a>
-          <div class="dropdown-menu" id="ContactoDropdown">
-            <a class="dropdown-item" href="Bastian.html">Bastian Lisperguer</a>
-            <a class="dropdown-item" href="Empresa.html">Comercial</a>
-          </div>
-        </li>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><b>Inicio</b></a>
+          </li>
+          <li class="nav-item dropdown" onmouseover="showDropdown('sobreMiDropdown')" onmouseout="hideDropdown('sobreMiDropdown')">
+            <a class="nav-link dropdown-toggle" href="#" id="sobreMiLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Equipo
+            </a>
+            <div class="dropdown-menu fade" id="sobreMiDropdown">
+              <a class="dropdown-item" href=".html">Marisol Vásquez</a>
+              <a class="dropdown-item" href=".html">Leandro Aguayo</a>
+              <!-- Submenú "Otras Opciones" dentro de "Equipo" -->
+              <div class="dropdown">
+                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Bastian Lisperguer
+                </a>
+                <div class="dropdown-menu fade" aria-labelledby="navbarDropdown2">
+                  <a class="dropdown-item" href="Yo.html.html">Bastian Lisperguer</a>
+                  <a class="dropdown-item" href="Profesional.html">Carrera Profesional</a>
+                  <a class="dropdown-item" href="Viaje.html">Viaja con migo</a>
+                </div>
+              </div>
+            </div>
+          </li>
 
+          <li class="nav-item dropdown" onmouseover="showDropdown('VITAIROSDropdown')" onmouseout="hideDropdown('VITAIROSDropdown')">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              VITAIROS
+            </a>
+            <div class="dropdown-menu" id="VITAIROSDropdown">
+              <a class="dropdown-item" href="Vitairos.html">VITAIROS</a>
+              <a class="dropdown-item" href="SaludM.html">VITAIROS SM</a>
+              <a class="dropdown-item" href="Geminis.html">G3minis</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown" onmouseover="showDropdown('BlogDropdown')" onmouseout="hideDropdown('BlogDropdown')">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Blog
+            </a>
+            <div class="dropdown-menu" id="BlogDropdown">
+              <a class="dropdown-item" href="Blog.html">Blog</a>
+              <a class="dropdown-item" href="IBM.html">Informática en Salud</a>
+              <a class="dropdown-item" href="IA.html">IA & Big Data</a>
+              <a class="dropdown-item" href="Economia.html">Economia & Política</a>
+              <a class="dropdown-item" href="Emprende.html">Emprende e Innova</a>
+              <a class="dropdown-item" href="TD.html">Trasformación Digital y Gestión del cambio</a>
+              <a class="dropdown-item" href="TI.html">IT & IoT</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown" onmouseover="showDropdown('ContactoDropdown')" onmouseout="hideDropdown('BlogDropdown')">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Contacto
+            </a>
+            <div class="dropdown-menu" id="BlogDropdown">
+              <a class="dropdown-item" href="Contacto.html">Contacto</a>
+              <a class="dropdown-item" href="Yo.html">Bastian Lisperguer</a>
+              <a class="dropdown-item" href="Empresa.html">Comercial</a>
+
+            </div>
+          </li>
+          <!-- Agrega más elementos de menú desplegable siguiendo el mismo patrón -->
         </ul>
+      </div>
     </div>
   </nav>
-
   <main class="py-5">
     <div class="container">
       <section id="inicio" class="mb-5">
@@ -90,10 +166,11 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <a href="#slide1">
-                <img src="bastian.jpg" width="300" height="200" alt="Slide 1">
+                <img src="bastian.jpg" width="300" height="300" alt="Slide 1">
                 <div class="carousel-caption">
-              <p class="text"><b>Abriendo Ventanas al Futuro Profesional</b></p><p class="text">"Descubre cómo el arte de hablar en público puede abrir nuevas perspectivas para los alumnos, mostrándoles un vistazo al mundo profesional y brindándoles las herramientas necesarias para enfrentar el éxito en su futuro."</p>
-                </div>
+              <p class="text"><b>Abriendo Ventanas al Futuro Profesional</b></p>
+              <p class="text">"Descubre cómo el arte de hablar en público puede abrir nuevas perspectivas para los alumnos, mostrándoles un vistazo al mundo profesional y brindándoles las herramientas necesarias para enfrentar el éxito en su futuro."</p>
+               </div>
               </a>
             </div>
             <div class="carousel-item">
